@@ -32,6 +32,7 @@ CPMAddPackage(
 # which is definitely not the platform which most users target.
 # 2) WIN32_LEAN_AND_MEAN is defined to make Winsock2 work.
 if(asio_ADDED)
+  find_package(Threads REQUIRED)
   add_library(asio INTERFACE)
 
   target_include_directories(asio
